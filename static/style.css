@@ -1,0 +1,30 @@
+:root{--bg:#0b0b0d;--card:#151518;--line:#26262b;--txt:#f2f2f4;--mut:#8d8d96;--red:#e5192d;--red2:#ff4d5e}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
+header{text-align:center;margin-bottom:22px}
+.logo{font-size:44px;font-weight:900;letter-spacing:10px;color:var(--red);text-shadow:0 0 28px rgba(229,25,45,.45)}
+.tag{color:var(--mut);margin:6px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:16px}
+.drop{display:flex;flex-direction:column;align-items:center;gap:6px;padding:38px 12px;border:2px dashed #3a3a42;border-radius:14px;cursor:pointer;text-align:center;transition:.15s}
+.drop:hover,.drop.over{border-color:var(--red);background:rgba(229,25,45,.06)}
+.drop strong{font-size:18px}.drop span{color:var(--mut)}.drop small{color:#62626b;margin-top:6px}
+.fname{font-weight:600;margin-bottom:12px;word-break:break-all}
+.bar{height:10px;background:#222227;border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--red2));transition:width .4s}
+.muted{color:var(--mut);margin-top:10px;font-size:14px}
+.msg{background:#2a1215;border:1px solid #5b1c24;color:#ffb3bb;padding:12px 14px;border-radius:12px}
+.player-top{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+.play{width:54px;height:54px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:20px;cursor:pointer;flex:none}
+.timeline{flex:1}.times{display:flex;justify-content:space-between;color:var(--mut);font-size:12px;margin-top:2px}
+input[type=range]{width:100%;accent-color:var(--red)}
+.stem{display:grid;grid-template-columns:96px 38px 38px 1fr 34px;gap:8px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.stem .name{font-weight:600;font-size:14px;text-align:right;direction:rtl}
+.stem button,.stem a.dl{height:34px;border-radius:9px;border:1px solid #34343b;background:#1d1d22;color:var(--txt);cursor:pointer;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center}
+.stem button.on{background:var(--red);border-color:var(--red)}
+.stem.muted-row .name{opacity:.4}
+.actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.btn{flex:1;min-width:140px;text-align:center;padding:12px;border-radius:12px;background:var(--red);color:#fff;border:0;font-weight:700;text-decoration:none;cursor:pointer;font-size:15px}
+.btn.ghost{background:#1d1d22;border:1px solid #34343b}
+footer{text-align:center;color:#55555d;font-size:12px;margin-top:20px}
+[hidden]{display:none!important}

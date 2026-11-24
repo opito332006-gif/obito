@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBITO | عزل الموسيقى</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-gated="{{ '1' if gated else '0' }}">
+<main>
+  <header>
+    <div class="logo">OBITO</div>
+    <p class="tag">افصل أي أغنية لـ فوكال • درامز • باص • آلات</p>
+  </header>
+
+  <section id="upload" class="card">
+    <label id="drop" class="drop" for="file">
+      <strong>اضغط لاختيار أغنية</strong>
+      <span>أو اسحبها هنا</span>
+      <small>mp3 / wav / flac / m4a / ogg — حتى {{ max_mb }}MB و{{ max_min }} دقايق</small>
+    </label>
+    <input id="file" type="file" accept="audio/*,.mp3,.wav,.flac,.m4a,.ogg,.opus,.aac" hidden>
+  </section>
+
+  <section id="progress" class="card" hidden>
+    <div id="fname" class="fname"></div>
+    <div class="bar"><i id="barfill"></i></div>
+    <div id="statustext" class="muted"></div>
+  </section>
+
+  <section id="result" class="card" hidden dir="ltr">
+    <div class="player-top">
+      <button id="play" class="play" aria-label="play">▶</button>
+      <div class="timeline">
+        <input id="seek" type="range" min="0" max="1000" value="0">
+        <div class="times"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+    <div id="stems"></div>
+    <div class="actions" dir="rtl">
+      <a id="zip" class="btn" href="#">تحميل الكل (ZIP)</a>
+      <button id="again" class="btn ghost">أغنية جديدة</button>
+    </div>
+  </section>
+
+  <p id="msg" class="msg" hidden></p>
+  <footer>الملفات بتتمسح تلقائي بعد {{ ttl }} دقيقة</footer>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
